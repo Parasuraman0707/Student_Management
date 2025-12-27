@@ -30,7 +30,7 @@ class Equal():
     def __init__(self):
         self.db = get_db()
     def equal(self,data):
-        query ="select * from mail where mail=%s"
+        query ="select * from  pr_mail where mail=%s"
         values = [data.email]
         cursor = self.db.cursor(dictionary=True)
         cursor.execute(query, values)
@@ -46,3 +46,4 @@ class Equal():
             # token = get_token(data.email)
             jwt = JWTtoken.get_token(data.email)
             return {"status": "success", "message":"verification completed","token":jwt}
+
