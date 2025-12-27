@@ -1,5 +1,5 @@
 from JWTtoken import get_token
-from db import get_db
+from api.db import get_db
 
 class Login():
     def __init__(self):
@@ -17,4 +17,5 @@ class Login():
         else:
             # user = result[0]
             token = get_token(data.email)
+
             return {"status": "success", "message":"verification completed","token":token}
