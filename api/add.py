@@ -1,7 +1,7 @@
 from dns.e164 import query
 
 from JWTtoken import verify_token
-from db import get_db
+from api.db import get_db
 # from main import Entry
 
 class Userd():
@@ -46,5 +46,6 @@ class Userd():
     #     cursor.close()
     #
     #     return {"status": "success", "Message": values}
+
 
 
