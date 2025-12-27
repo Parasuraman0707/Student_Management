@@ -1,4 +1,4 @@
-from db import get_db
+from api.db import get_db
 
 class Create:
     def __init__(self):
@@ -11,4 +11,5 @@ class Create:
         self.db.commit()
         cursor.close()
         self.db.close()
+
         return {"status":"created","message":values}
