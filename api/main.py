@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 
 # import bcrypt
-from add import Userd
+from api.add import Userd
 from updateput import UpdatePut
 from login import Login
 from emailequal import Equal
@@ -153,4 +153,5 @@ def update(data: Entr):
 #         return {"status": "error", "message": str(e)}
 #     finally:
 #         cursor.close()
+
 #         db.close()
