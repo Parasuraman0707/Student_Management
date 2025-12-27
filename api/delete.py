@@ -1,4 +1,4 @@
-from db import get_db
+from api.db import get_db
 from JWTtoken import verify_token
 
 
@@ -17,6 +17,7 @@ class Delete():
         cursor.close()
         self.db.close()
         return {"status":"success","message":value}
+
 
 
 
