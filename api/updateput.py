@@ -1,5 +1,5 @@
 from api.db import get_db
-from JWTtoken import verify_token
+from api.JWTtoken import verify_token
 
 class UpdatePut():
     def __init__(self):
@@ -17,6 +17,7 @@ class UpdatePut():
         cursor.close()
         self.db.close()
         return {"status": "success","Message":values}
+
 
 
 
