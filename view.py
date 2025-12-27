@@ -9,7 +9,7 @@ class View():
         yes1 = verify_token(ok)
 
         if data.email == yes1['email']:
-            query="select * from details"
+            query="select * from  pr_details"
             cursor = self.db.cursor(dictionary=True)
             cursor.execute(query)
             results = cursor.fetchall()
@@ -18,5 +18,6 @@ class View():
             return {"status": "success","Message":results}
         else:
             return {"status": "error","Message":"Invalid token","yes": yes1}
+
 
 
