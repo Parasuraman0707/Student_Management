@@ -8,7 +8,7 @@ class Delete():
         self.db = get_db()
     def delete(self,data):
 
-        query = "delete from details where id=%s"
+        query = "delete from  pr_details where id=%s"
         value = (data,)
         cursor = self.db.cursor()
         cursor.execute(query,value)
@@ -17,6 +17,7 @@ class Delete():
         cursor.close()
         self.db.close()
         return {"status":"success","message":value}
+
 
 
 
