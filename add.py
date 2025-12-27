@@ -12,7 +12,7 @@ class Userd():
         yes=verify_token(ok)
 
         if data.email==yes['email']:
-            query = "insert into details (name,course,college,number) values(%s,%s,%s,%s)"
+            query = "insert into  pr_details (name,course,college,number) values(%s,%s,%s,%s)"
             values =(data.name,data.course,data.college,data.number)
             cursor = self.db.cursor()
             cursor.execute(query,values)
@@ -46,6 +46,7 @@ class Userd():
     #     cursor.close()
     #
     #     return {"status": "success", "Message": values}
+
 
 
 
