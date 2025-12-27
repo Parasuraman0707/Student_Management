@@ -1,5 +1,5 @@
 import JWTtoken
-from db import get_db
+from api.db import get_db
 from JWTtoken import verify_token
 #
 #
@@ -46,3 +46,4 @@ class Equal():
             # token = get_token(data.email)
             jwt = JWTtoken.get_token(data.email)
             return {"status": "success", "message":"verification completed","token":jwt}
+
