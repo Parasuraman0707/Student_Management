@@ -9,7 +9,7 @@ class UpdatePut():
         # token2=JWTtoken.get_token(get_token)
         # return {"token":token2, 'status' : "success"}
         # # return "pass"
-        query = "UPDATE mail SET password=%s WHERE mail = %s"
+        query = "UPDATE  pr_mail SET password=%s WHERE mail = %s"
         values = (data.password,data.email)
         cursor = self.db.cursor()
         cursor.execute(query,values)
@@ -17,5 +17,6 @@ class UpdatePut():
         cursor.close()
         self.db.close()
         return {"status": "success","Message":values}
+
 
 
