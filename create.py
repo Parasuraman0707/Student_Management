@@ -4,7 +4,7 @@ class Create:
     def __init__(self):
         self.db = get_db()
     def create(self,data):
-        query="insert into mail (mail,password) values (%s,%s)"
+        query="insert into  pr_mail (mail,password) values (%s,%s)"
         values=(data.email,data.password)
         cursor=self.db.cursor()
         cursor.execute(query,values)
@@ -12,3 +12,4 @@ class Create:
         cursor.close()
         self.db.close()
         return {"status":"created","message":values}
+
