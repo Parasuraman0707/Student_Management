@@ -1,6 +1,6 @@
 
 
-from JWTtoken import verify_token
+from api.JWTtoken import verify_token
 from api.db import get_db
 # from main import Entry
 
@@ -46,6 +46,7 @@ class Userd():
     #     cursor.close()
     #
     #     return {"status": "success", "Message": values}
+
 
 
 
