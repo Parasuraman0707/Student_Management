@@ -5,13 +5,13 @@ from pydantic import BaseModel
 
 # import bcrypt
 from api.add import Userd
-from updateput import UpdatePut
-from login import Login
-from emailequal import Equal
-from view import View
-from delete import Delete
-from create import Create
-from update import Update
+from api.updateput import UpdatePut
+from api.login import Login
+from api.emailequal import Equal
+from api.view import View
+from api.delete import Delete
+from api.create import Create
+from api.update import Update
 
 
 # hashed_pw = bcrypt.hashpw(data.password.encode('utf-8'), bcrypt.gensalt())
@@ -155,3 +155,4 @@ def update(data: Entr):
 #         cursor.close()
 
 #         db.close()
+
