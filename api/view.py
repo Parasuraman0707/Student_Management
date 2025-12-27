@@ -1,5 +1,5 @@
 from api.db import get_db
-from JWTtoken import verify_token
+from api.JWTtoken import verify_token
 
 class View():
     def __init__(self):
@@ -18,6 +18,7 @@ class View():
             return {"status": "success","Message":results}
         else:
             return {"status": "error","Message":"Invalid token","yes": yes1}
+
 
 
 
