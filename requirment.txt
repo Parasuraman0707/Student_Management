@@ -1,2 +1,6 @@
 fastapi
-uvicorn
+uvicorn[standard]
+python-jose[cryptography]
+mysql-connector-python
+pydantic
+starlette
